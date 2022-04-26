@@ -55,9 +55,11 @@ python PENCIL.py --evaluate
 ```
 
 reference : 
+```
 @inproceedings{PENCIL_CVPR_2019,
 author = {Kun, Yi and Jianxin, Wu},
 title = {{Probabilistic End-to-end Noise Correction for Learning with Noisy Labels}},
 booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
 year = {2019}
 }
+```

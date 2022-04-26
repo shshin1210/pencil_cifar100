@@ -12,7 +12,7 @@ Noisy label here means that some of the given labels are not correct (e.g., it i
 
 Go to [dataset page in our kaggle page for this challenge (CIFAR100-NoisyLabel)](https://www.kaggle.com/c/cifar100-image-classification-with-noisy-labels/data) to download the dataset. Copy (or move) the dataset into `./dataset` sub-directory.
 
-### files
+### Files
 
 make sure dataset file is well organized as below
 

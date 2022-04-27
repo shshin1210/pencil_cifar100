@@ -1,8 +1,5 @@
 # pencil_cifar100
 
-# cv-proj-withmixup
-label noise alleviated by mixup 
-
 We will implement neural network models for image classification problem with label noise and class imbalance.
 
 The second assignment let you implement any neural network models for image classification on CIFAR100 dataset with noisy label.

@@ -46,9 +46,9 @@ Train & validation for cifar100
 python PENCIL.py
 ```
 
-Test for cifar100
+Test for cifar100 with best model
 ```
-python PENCIL.py --evaluate
+python PENCIL.py --evaluate --best True
 ```
 
 reference : 

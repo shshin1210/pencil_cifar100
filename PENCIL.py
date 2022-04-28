@@ -187,11 +187,12 @@ def main():
         else:
             y = []
         
+        # train & print Acc
         acc = train(trainloader, model, criterion, optimizer, epoch, y)
         acc_trainlist.append(acc)
         print("train total acc of epoch [%d] : %.4f %%" %(epoch,acc))
 
-        # evaluate on validation set
+        # evaluate on validation/test set & print ACC
         prec1, _ = validate(valloader, model, criterion)
         _, acc_test = validate(testloader, model, criterion)
         acc_testlist.append(acc_test)
@@ -215,7 +216,7 @@ def main():
     plt.ylabel('Accuracy') 
     plt.plot(epochs, acc_trainlist) 
     plt.plot(epochs, acc_testlist) 
-    plt.savefig('plot_pencil.png')
+    plt.savefig('plot.png')
 
     print(acc_testlist)
     print(max(acc_testlist))
@@ -393,13 +394,13 @@ def adjust_learning_rate(optimizer, epoch):
     """Sets the learning rate"""
     if epoch < args.stage1:
         lr = args.lr # 0.35
-    elif epoch < args.stage2 :
+    elif epoch < args.stage2 : # ~200
         lr = args.lr/10 #0.035
     # elif epoch < (args.epochs - args.stage2)//3 + args.stage2:
     #     lr = args.lr2 
-    elif epoch < 2 * (args.epochs - args.stage2)//3 + args.stage2:
+    elif epoch < 2 * (args.epochs - args.stage2)//3 + args.stage2: # ~280
         lr = args.lr2/10
-    else:
+    else: # ~320
         lr = args.lr2/100
     for param_group in optimizer.param_groups:
         param_group['lr'] = lr

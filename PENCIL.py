@@ -392,11 +392,11 @@ class AverageMeter(object):
 def adjust_learning_rate(optimizer, epoch):
     """Sets the learning rate"""
     if epoch < args.stage1:
-        lr = args.lr
+        lr = args.lr # 0.35
     elif epoch < args.stage2 :
-        lr = args.lr/10
-    elif epoch < (args.epochs - args.stage2)//3 + args.stage2:
-        lr = args.lr2
+        lr = args.lr/10 #0.035
+    # elif epoch < (args.epochs - args.stage2)//3 + args.stage2:
+    #     lr = args.lr2 
     elif epoch < 2 * (args.epochs - args.stage2)//3 + args.stage2:
         lr = args.lr2/10
     else:

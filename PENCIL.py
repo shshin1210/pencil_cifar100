@@ -215,7 +215,7 @@ def main():
     plt.ylabel('Accuracy') 
     plt.plot(epochs, acc_trainlist) 
     plt.plot(epochs, acc_testlist) 
-    plt.savefig('plot.png')
+    plt.savefig('plot_pencil.png')
 
     print(acc_testlist)
     print(max(acc_testlist))
